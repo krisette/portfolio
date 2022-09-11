@@ -2,14 +2,13 @@ import { useState } from "react";
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
-
     return (
         <nav className="w-full bg-black-500 shadow">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-2xl font-bold text-white">k logo?</h2>
+                            <h2 className="text-2xl font-bold text-white">logo go here?</h2>
                         </a>
                         <div className="md:hidden">
                             <button
@@ -57,21 +56,22 @@ export default function NavBar() {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">about me</a>
+                              <a href="javascript:void(0)">about me</a>
                             </li>
                             <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">experience</a>
+                              <a href="javascript:void(0)">experience</a>
                             </li>
                             <li className="text-white hover:text-indigo-200">
-                                <a href="javascript:void(0)">work</a>
+                              <a href="javascript:void(0)">work</a>
                             </li>
                             <li className="text-white hover:text-indigo-200">
-                            <a
-                        href="javascript:void(0)"
-                        className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
-                    >
-                        rezooom
-                    </a></li>
+                              <a
+                              href="javascript:void(0)"
+                              className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
+                              >
+                              rezooom
+                              </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

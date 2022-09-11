@@ -6,8 +6,8 @@ import particlesOptions from "./config/particles.json";
 import { tsParticles } from "tsparticles-engine";
 import { loadHeartShape } from "tsparticles-shape-heart";
 import NavBar from './components/NavBar';
-import Content from './components/Content.js';
-import Links from './components/Links.js';
+import Content from './components/Content';
+import Links from './components/Links';
 
 loadHeartShape(tsParticles);
 
