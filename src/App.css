@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
     text-align: center;
 }
@@ -5,6 +9,26 @@
 .App-logo {
     height: 40vmin;
     pointer-events: none;
+}
+
+.bootstrap-icon {
+    display: inline-block;
+}
+
+.bi-bi-geo-alt {
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    padding-right: 5px;
+    transition: transform 0.2s ease-in;
+}
+
+.bi-bi-geo-alt > g > rect {
+    transition: fill 1s ease-in;
+}
+
+.bi-bi-geo-alt:hover {
+    transform: rotate(360deg);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -25,15 +49,6 @@
 
 .App-link {
     color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 #tsparticles {
