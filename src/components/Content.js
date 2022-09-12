@@ -5,8 +5,8 @@ import { AnimateSharedLayout } from 'framer-motion';
 export default function Content() {
   return(
       <AnimateSharedLayout>
-        <div className='flex flex-1 h-screen max-h-fit flex-col' >
-          <div className="mt-40 flex flex-col justify-center items-center" >
+        <div className="flex flex-1 h-screen max-h-fit flex-col">
+          <div className="mt-40 flex flex-col justify-center items-center">
             <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} className="flex flex-col items-center justify-center w-full font-dmSans z-2">
               <h1 className="text-white text-5xl md:text-6xl xl:text-7xl z-10">hi i&apos;m <span className="bg-gradient-to-r from-pink-300 to-rose-400 font-bold bg-clip-text text-transparent">krisette</span> ✨</h1>
               <h2 className="text-white text-2xl md:text-2xl lg:text-4xl mt-2">software engineer <span className="bg-gradient-to-r from-pink-300 to-rose-400 bg-clip-text text-transparent">+</span> RN</h2>

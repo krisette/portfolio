@@ -3,13 +3,13 @@ import { useState } from "react";
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
     return (
-        <nav className="w-full bg-black-500 shadow">
+        <nav className="w-full bg-black-500">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
+                  {/* logo left side */}
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <a href="javascript:void(0)">
                             <h2 className="text-2xl font-bold text-white">logo go here?</h2>
-                        </a>
+                        {/* hamburger menu */}
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -35,7 +35,7 @@ export default function NavBar() {
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
-                                        strokeWidth={2}
+                                        strokeWidth="2"
                                     >
                                         <path
                                             strokeLinecap="round"
@@ -49,24 +49,24 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div>
+                  {/* links right side */}
                     <div
                         className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
                             navbar ? "block" : "hidden"
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-white hover:text-indigo-200">
-                              <a href="javascript:void(0)">about me</a>
+                            <li className="text-white hover:text-pink-200">
+                              <a href="_blank">about me</a>
                             </li>
-                            <li className="text-white hover:text-indigo-200">
-                              <a href="javascript:void(0)">experience</a>
+                            <li className="text-white hover:text-pink-200">
+                              <a href="_blank">experience</a>
                             </li>
-                            <li className="text-white hover:text-indigo-200">
-                              <a href="javascript:void(0)">work</a>
+                            <li className="text-white hover:text-pink-200">
+                              <a href="_blank">work</a>
                             </li>
-                            <li className="text-white hover:text-indigo-200">
-                              <a
-                              href="javascript:void(0)"
+                            <li className="text-white hover:text-pink-200">
+                              <a href="_blank"
                               className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
                               >
                               rezooom
