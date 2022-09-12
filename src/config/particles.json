@@ -1,7 +1,7 @@
 {
   "background": {
     "color": {
-      "value": "#060606"
+      "value": "#000000"
     }
   },
   "fpsLimit": 120,
@@ -12,7 +12,7 @@
         "mode": "grab"
       },
       "onHover": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true
@@ -26,7 +26,7 @@
       },
       "push": {
         "particles": {
-          "number": 4
+          "number": 6
         }
       },
       "repulse": {
@@ -37,7 +37,7 @@
   },
   "particles": {
     "color": {
-      "value": ["#e879f9", "#d946ef", "#c026d3", "#f472b6", "#f9a8d4", "#ec4899", "#db2777", "#ffffff"]
+      "value": ["#d58a94", "#d9969f", "#dda1a9", "#e2adb4", "#e6b9bf", "#eac5ca", "#f7e8ea", "#ffffff"]
     },
     "links": {
       "color": ["#c026d3", "#C526C4", "#C926B4", "#CE27A5", "#D22796", "#D72786", "#DB2777", "#ffffff"],
@@ -63,7 +63,7 @@
         "enable": true,
         "value_area": 800
       },
-      "value": 200
+      "value": 400  
     },
     "opacity": {
       "value": 0.7,
@@ -85,7 +85,7 @@
     },
     "size": {
       "random": true,
-      "value": 2.5,
+      "value": 3,
       "anim": {
         "enable": true,
         "speed": 4
