@@ -1,7 +1,7 @@
 ## portfolio
 updating as i go along
 
-## technologies used
+## built w/
 - react
 - tailwindcss
 - bootstrap icons
