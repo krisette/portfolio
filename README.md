@@ -1,9 +1,10 @@
 ## portfolio
 updating as i go along
 
-## built w/
+## built with...
 - react
 - tailwindcss
 - bootstrap icons
 - framer-motion
 - tsparticles
+- vite
