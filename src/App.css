@@ -15,7 +15,7 @@
     display: inline-block;
 }
 
-.bi-bi-geo-alt {
+#bi-bi-geo-alt {
     height: 35px;
     width: 35px;
     display: inline-block;
@@ -23,11 +23,11 @@
     transition: transform 0.2s ease-in;
 }
 
-.bi-bi-geo-alt > g > rect {
+#bi-bi-geo-alt > g > rect {
     transition: fill 1s ease-in;
 }
 
-.bi-bi-geo-alt:hover {
+#bi-bi-geo-alt:hover {
     transform: rotate(360deg);
 }
 
