@@ -20,12 +20,6 @@ module.exports = {
         dmSans: ["DM Sans", "sans-serif"],
       },
       colors: {
-        navMenu: "#1f1f1f",
-        github: "#24292e",
-        twitter: "#1da1f2",
-        gmail: "#ea4335",
-        spotify: "#1db954",
-        instagram: "#3f729b",
       },
       height: {
         "almost": "calc(100vh - 4rem)",

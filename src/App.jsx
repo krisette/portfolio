@@ -8,6 +8,8 @@ import { loadHeartShape } from 'tsparticles-shape-heart';
 import NavBar from './components/NavBar';
 import Content from './components/Content';
 import Links from './components/Links';
+import AboutMe from './components/AboutMe';
+import { Outlet } from "react-router-dom";
 
 loadHeartShape(tsParticles);
 
@@ -20,7 +22,9 @@ function App() {
         <div>
         <Particles options={particlesOptions} init={particlesInit}/>
         <NavBar />
-        <Content />
+        {/* <Content /> */}
+        {/* <AboutMe /> */}
+        <Outlet />
         <Links />
         </div>
     )}

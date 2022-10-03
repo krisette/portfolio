@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/krisette_odegard.svg";
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
@@ -8,7 +9,7 @@ export default function NavBar() {
                 <div>
                   {/* logo left side */}
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                            <h2 className="text-2xl font-bold text-white">logo go here?</h2>
+                            <a href={'/'}><img src={logo} className="h-px: 50" /></a>
                         {/* hamburger menu */}
                         <div className="md:hidden">
                             <button
@@ -56,20 +57,20 @@ export default function NavBar() {
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-white hover:text-pink-200">
-                              <a href="_blank">about me</a>
+                            <li className="hover-underline-animation">
+                              <a href={'about'}>about me</a>
                             </li>
-                            <li className="text-white hover:text-pink-200">
+                            <li className="hover-underline-animation">
                               <a href="_blank">experience</a>
                             </li>
-                            <li className="text-white hover:text-pink-200">
-                              <a href="_blank">work</a>
+                            <li className="hover-underline-animation">
+                              <a href="_blank">contact</a>
                             </li>
                             <li className="text-white hover:text-pink-200">
                               <a href="_blank"
                               className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
                               >
-                              rezooom
+                              download resume
                               </a>
                             </li>
                         </ul>
