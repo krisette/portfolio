@@ -9,11 +9,13 @@ import {
 } from "react-router-dom";
 import Content from './components/Content.jsx';
 import AboutMe from './components/AboutMe.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App key="app" />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/",
         element: <Content key="content" /> },

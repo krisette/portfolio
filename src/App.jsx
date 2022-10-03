@@ -22,8 +22,6 @@ function App() {
         <div>
         <Particles options={particlesOptions} init={particlesInit}/>
         <NavBar />
-        {/* <Content /> */}
-        {/* <AboutMe /> */}
         <Outlet />
         <Links />
         </div>
