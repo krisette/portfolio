@@ -8,6 +8,7 @@ import { tsParticles } from 'tsparticles-engine';
 import { loadHeartShape } from 'tsparticles-shape-heart';
 import { useRouteError } from "react-router-dom";
 import NavBar from './NavBar';
+import Links from './Links';
 
 loadHeartShape(tsParticles);
 
@@ -39,5 +40,6 @@ export default function ErrorPage() {
         </div>
     </div>
   </AnimateSharedLayout>
+  <Links />
 </div>
 )}
