@@ -5,6 +5,7 @@ updating as i go along
 - react
 - react-router
 - tailwindcss
+- material tailwind
 - bootstrap icons
 - framer-motion
 - tsparticles
