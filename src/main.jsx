@@ -7,8 +7,10 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import { ThemeProvider } from "@material-tailwind/react";
 import Content from './components/Content.jsx';
 import AboutMe from './components/AboutMe.jsx';
+import Experience from './components/Experience.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
@@ -23,9 +25,15 @@ const router = createBrowserRouter([
         path: "about",
         element: <AboutMe />,
       },
+      {
+        path: "experience",
+        element: <Experience />,
+      }
     ],
   },
 ]);
 
 const root = createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={router} />);
+root.render(<ThemeProvider>
+  <RouterProvider router={router} />
+  </ThemeProvider>);

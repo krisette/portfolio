@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.4",
     "bootstrap-icons": "^1.9.1",
     "framer-motion": "^7.3.2",
     "localforage": "^1.10.0",

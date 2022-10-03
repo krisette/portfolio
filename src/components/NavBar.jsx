@@ -4,7 +4,7 @@ import logo from "../assets/krisette_odegard.svg";
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
     return (
-        <nav className="w-full bg-black-500">
+        <nav className="w-full bg-black-500 lowercase">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                   {/* logo left side */}
@@ -58,19 +58,19 @@ export default function NavBar() {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="hover-underline-animation">
-                              <a href={'about'}>about me</a>
+                              <a href={'about'}>About Me</a>
                             </li>
                             <li className="hover-underline-animation">
-                              <a href="_blank">experience</a>
+                              <a href={'experience'}>Experience</a>
                             </li>
                             <li className="hover-underline-animation">
-                              <a href="_blank">contact</a>
+                              <a href="_blank">Contact</a>
                             </li>
                             <li className="text-white hover:text-pink-200">
                               <a href="_blank"
                               className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
                               >
-                              download resume
+                              Download Resume
                               </a>
                             </li>
                         </ul>

@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
     './public/index.html',
     './src/**/*.{html,js,jsx,ts,tsx}'
@@ -14,17 +16,7 @@ module.exports = {
       xl: '1280px',
     },
     extend: {
-      fontFamily: {
-        outfit: ["Outfit", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
-        dmSans: ["DM Sans", "sans-serif"],
-      },
-      colors: {
-      },
-      height: {
-        "almost": "calc(100vh - 4rem)",
-      }
     },
   },
   plugins: [],
-}
+});
