@@ -16,22 +16,33 @@ const projects = [
     name: "Welcome Home, Friend",
     img_src: "",
     description: "A social media app to help owners find their furry friend once again.",
-    tech: "React, React Hooks, React Context, PostgresQL, Node.js, Express, HTML5, MaterialUI",
+    tech: "React (Hooks/Context), PostgresQL, Node.js, Express, HTML5, MaterialUI",
     demo: "",
     github: "https://github.com/StarNosedMoleWCRI53/welcome-home-friend"
-  }
+  },
+  {
+    name: "Meet Me at the Spot",
+    img_src: "",
+    description: "A social media app to help owners find their furry friend once again.",
+    tech: "React (Hooks/Context), PostgresQL, Node.js, Express, HTML5, MaterialUI",
+    demo: "",
+    github: "https://github.com/StarNosedMoleWCRI53/welcome-home-friend"
+  },
 ];
 
 export default function AboutMe() {
   return (
-    <AnimateSharedLayout>
       <div className="flex flex-1 h-screen max-h-fit flex-col">
         <div className="mt-40 flex flex-col justify-center items-center">
-          <motion.div initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: -100 }} transition={{ duration: 2 }} className="grid gap-4 grid-cols-3 items-center justify-center w-full z-2 w-3/4 gap-4">
-            {projects.map((el, i) => <Project key={i} project={el} />)}
+          <motion.div
+            layout
+            initial={{ opacity: 0, y: 200 }}
+            animate={{ opacity: 1, y: -100 }}
+            transition={{ duration: 2 }}
+            className="grid gap-4 grid-cols-3 items-center justify-center w-full z-2 w-3/4 gap-4">
+              {projects.map((el, i) => <Project key={i} project={el} />)}
           </motion.div>
         </div>
       </div>
-  </AnimateSharedLayout>
   )
 }
