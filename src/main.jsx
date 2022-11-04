@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Route,
 } from "react-router-dom";
@@ -13,13 +13,13 @@ import AboutMe from './components/AboutMe.jsx';
 import Experience from './components/Experience.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/",
+    path: "",
     element: <App key="app" />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/",
+      { path: "",
         element: <Content key="content" /> },
       {
         path: "about",

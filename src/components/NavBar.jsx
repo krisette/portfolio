@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/krisette_odegard.svg";
 
 export default function NavBar() {
@@ -58,13 +59,13 @@ export default function NavBar() {
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
                             <li className="hover-underline-animation">
-                              <a href={'about'}>About Me</a>
+                              <Link to={'about'}>About Me</Link>
                             </li>
                             <li className="hover-underline-animation">
-                              <a href={'experience'}>Experience</a>
+                              <Link to={'experience'}>Experience</Link>
                             </li>
                             <li className="hover-underline-animation">
-                              <a href="_blank">Contact</a>
+                              <Link to="_blank">Contact</Link>
                             </li>
                             <li className="text-white hover:text-pink-200">
                               <a href="_blank"
