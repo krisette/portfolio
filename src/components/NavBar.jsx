@@ -8,8 +8,8 @@ export default function NavBar() {
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                   {/* logo left side */}
-                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                            <a href={'/'}><img src={logo} className="h-px: 50" /></a>
+                    <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
+                            <a href={'/'}>logo</a>
                         {/* hamburger menu */}
                         <div className="md:hidden">
                             <button

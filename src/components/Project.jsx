@@ -12,6 +12,7 @@ export default function Project( {project}) {
   const { name, img_src, description, tech, demo, github } = project;
 
   return (
+    <div>
     <Card className="w-80 bg-gray-900">
     <CardHeader color="pink" className="relative h-56">
       <img
@@ -39,5 +40,6 @@ export default function Project( {project}) {
       </Typography>
     </CardFooter>
   </Card>
+  </div>
   );
 }

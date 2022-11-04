@@ -25,6 +25,7 @@ export default function AboutMe() {
                 <li>✨ Node.js</li>
                 <li>✨ Express</li>
                 <li>✨ JavaScript (ES6+)</li>
+                <li>✨ TypeScript</li>
                 <li>✨ React / React Hooks</li>
                 <li>✨ MongoDB</li>
                 <li>✨ PostgreSQL</li>
