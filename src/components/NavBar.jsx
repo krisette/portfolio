@@ -10,7 +10,7 @@ export default function NavBar() {
                 <div>
                   {/* logo left side */}
                     <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
-                            <a href={'/'}>logo</a>
+                            <Link to="">logo</Link>
                         {/* hamburger menu */}
                         <div className="md:hidden">
                             <button
