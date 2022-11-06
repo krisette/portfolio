@@ -13,6 +13,14 @@ const projects = [
     github: "https://github.com/StarNosedMoleWCRI53/welcome-home-friend"
   },
   {
+    name: "Ghost Website",
+    img_src: "",
+    description: "Static website for Ghost.",
+    tech: "Typescript, React, React Router, TailwindCSS, TailwindUI",
+    demo: "http://krisette.github.io/ghost-website",
+    github: "https://github.com/krisette/ghost-website"
+  },
+  {
     name: "Imagine",
     img_src: "",
     description: "A trip management/planning app for your magical Disney adventures.",
