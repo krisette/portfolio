@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import './App.css';
@@ -11,25 +11,38 @@ import Links from './components/Links';
 import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
-import { Outlet } from "react-router-dom";
+import BackToTop from './components/BackToTop';
 
 loadHeartShape(tsParticles);
 
 function App() {
-    const particlesInit = useCallback(main => {
-        loadFull(main);
-    }, [])
+	const particlesInit = useCallback(main => {
+			loadFull(main);
+	}, [])
 
-    return (
-        <div className='scroll-smooth'>
-        <Particles options={particlesOptions} init={particlesInit}/>
-        <NavBar />
-        <Content />
-        <AboutMe />
-        <Experience />
-        <Contact />
-        <Links />
-        </div>
-    )}
+	const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 50) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
+	return (
+			<div>
+			<Particles options={particlesOptions} init={particlesInit}/>
+			<NavBar />
+			<Content />
+			<AboutMe />
+			<Experience />
+			<Contact />
+			<Links />
+			{showButton ? <BackToTop /> : null}
+			</div>
+	)}
 
 export default App;

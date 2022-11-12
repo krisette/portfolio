@@ -12,16 +12,16 @@ const projects = [
     img_src: Ghost,
     description: "An AWS Lambda metrics visualizer. Accelerated by OSLabs.",
     tech: "Typescript, React, TailwindCSS, HTML5, MaterialUI, Electron, AWS-SDK",
-    demo: "",
-    github: "https://github.com/StarNosedMoleWCRI53/welcome-home-friend"
+    demo: "https://github.com/oslabs-beta/ghost/releases/tag/v1.0.0",
+    github: "https://github.com/oslabs-beta/ghost"
   },
   {
     name: "Ghost Website",
     img_src: GhostWebsite,
     description: "Static website for Ghost.",
     tech: "Typescript, React, React Router, TailwindCSS, TailwindUI",
-    demo: "http://krisette.github.io/ghost-website",
-    github: "https://github.com/krisette/ghost-website"
+    demo: "http://os-ghost.github.io/website",
+    github: "https://github.com/os-ghost/website"
   },
   {
     name: "Imagine",
@@ -37,15 +37,15 @@ const projects = [
     description: "A social media app to help owners find their furry friend once again.",
     tech: "React, PostgresQL, Node.js, Express, HTML5, MaterialUI",
     demo: "",
-    github: "https://github.com/StarNosedMoleWCRI53/welcome-home-friend"
+    github: "https://github.com/WelcomeHomeFriend/welcome-home-friend"
   },
   {
     name: "Meet Me at the Spot",
     img_src: "",
-    description: "Iterated on an already existing codebase.",
+    description: "A social media app to share your favorite locations.",
     tech: "React, PostgresQL, Node.js, Express, HTML5, MaterialUI",
     demo: "",
-    github: "https://github.com/pandawhale-viewfinder/view-finder"
+    github: "https://github.com/MeetmeattheSpot/Meet-me-at-the-Spot"
   },
 ];
 
@@ -69,10 +69,10 @@ export default function Experience() {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
             style={{ y }}
-            className="grid grid-cols-3 items-center z-2 w-3/4 gap-10 align-top">
+            className="flex flex-col items-center align-center w-3/4">
               {projects.map((project) => (
-                <div key={project.name} className="flex flex-col overflow-hidden rounded-lg shadow-lg h-96">
-                  <div className="flex-shrink-0">
+                <div key={project.name} className="flex flex-row h-96 w-screen">
+                  <div className="flex">
                     <img className="h-48 w-full object-cover" src={project.img_src} alt="" />
                   </div>
                   <div className="flex flex-1 flex-col text-white p-6 h-24">
