@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/krisette_odegard.svg";
+import React, { useState, useEffect } from "react";
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default function NavBar() {
+ 
     const [navbar, setNavbar] = useState(false);
     return (
         <nav className="w-full bg-black-500 lowercase">
@@ -10,7 +11,7 @@ export default function NavBar() {
                 <div>
                   {/* logo left side */}
                     <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
-                            <Link to="">logo</Link>
+                            <a href="">logo</a>
                         {/* hamburger menu */}
                         <div className="md:hidden">
                             <button
@@ -58,14 +59,14 @@ export default function NavBar() {
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="hover-underline-animation">
-                              <Link to={'about'}>About Me</Link>
+                            <li className="hover-underline-animation cursor-pointer">
+                              <Link to="aboutme" smooth={true}>About Me</Link>
                             </li>
-                            <li className="hover-underline-animation">
-                              <Link to={'experience'}>Experience</Link>
+                            <li className="hover-underline-animation cursor-pointer">
+                              <Link to="experience" smooth={true}>Experience</Link>
                             </li>
-                            <li className="hover-underline-animation">
-                              <Link to="_blank">Contact</Link>
+                            <li className="hover-underline-animation cursor-pointer">
+															<Link to="contact" smooth={true}>Contact</Link>
                             </li>
                             <li className="text-white hover:text-pink-200">
                               <a href="_blank"

@@ -9,6 +9,8 @@ import NavBar from './components/NavBar';
 import Content from './components/Content';
 import Links from './components/Links';
 import AboutMe from './components/AboutMe';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 import { Outlet } from "react-router-dom";
 
 loadHeartShape(tsParticles);
@@ -19,10 +21,13 @@ function App() {
     }, [])
 
     return (
-        <div>
+        <div className='scroll-smooth'>
         <Particles options={particlesOptions} init={particlesInit}/>
         <NavBar />
-        <Outlet />
+        <Content />
+        <AboutMe />
+        <Experience />
+        <Contact />
         <Links />
         </div>
     )}
