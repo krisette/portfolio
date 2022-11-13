@@ -30,8 +30,8 @@ export default function Contact() {
               hidden: { opacity: 0, scale: 1 }
             }}
             style={{ y }}
-            className="flex flex-col items-center justify-center w-full z-2 mb-16">
-            <h1 className="text-gray-50 mb-5 text-xl lg:text-2xl xl:text-3xl">Feel free to reach out to me. Let's <span className="text-pink-100 font-bold">connect</span>!</h1>
+            className="flex flex-col items-center justify-center w-full mb-16">
+            <h1 className="text-gray-50 text-5xl md:text-6xl xl:text-7xl">let's <span className="bg-gradient-to-r from-pink-100 to-pink-400 font-bold bg-clip-text text-transparent hover-underline-animation">connect</span> ✨</h1>
           </motion.div>
         </div>
       </Element>

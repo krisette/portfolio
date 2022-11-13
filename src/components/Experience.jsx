@@ -1,6 +1,7 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { Element } from 'react-scroll';
 import WelcomeHomeFriend from '../assets/welcome_home_friend.png';
 import GhostWebsite from '../assets/ghost_website.png';
@@ -49,31 +50,33 @@ const projects = [
   },
 ];
 
-export default function Experience() {
-  const { scrollY } = useScroll()
-  const [elementTop, setElementTop] = useState(0);
-  const ref = useRef(null);
-  const y = useTransform(scrollY, [elementTop, elementTop + 1], [1, 0], {
-    clamp: false
-  });
-  useLayoutEffect(() => {
-    const element = ref.current;
-    setElementTop(element.offsetTop);
-  }, [ref]);
+const boxVariant = {
+  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 1, x: -500 }
+};
+
+const Box = ({ project }) => {
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
 
   return (
-      <Element name="experience">
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
-            style={{ y }}
-            className="flex flex-col items-center align-center w-3/4">
-              {projects.map((project) => (
-                <div key={project.name} className="flex flex-row h-96 w-screen">
-                  <div className="flex">
-                    <img className="h-48 w-full object-cover" src={project.img_src} alt="" />
+    <motion.div
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
+       <div className="flex">
+                    <img className="h-48 object-cover" src={project.img_src} alt="" />
                   </div>
                   <div className="flex flex-1 flex-col text-white p-6 h-24">
                         <p className="text-xl font-semibold">{project.name}</p>
@@ -94,9 +97,18 @@ export default function Experience() {
                         </div>
                       </div>
                     </div>
-                  </div>
+              
+    </motion.div>
+  );
+};
+
+export default function Experience() {
+  return (
+      <Element name="experience" className="flex flex-col items-center align-center">
+              <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2"><span className="bg-gradient-to-r from-pink-100 to-pink-400 font-bold bg-clip-text text-transparent hover-underline-animation">experience</span> ✨</h1>
+              {projects.map((project) => (
+                <Box key={project.name} project={project} />
               ))}
-          </motion.div>
         </Element>
   );
 }
