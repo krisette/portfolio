@@ -1,82 +1,79 @@
-
-
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 .bootstrap-icon {
-    display: inline-block;
+  display: inline-block;
 }
 
 #bi-bi-geo-alt {
-    height: 35px;
-    width: 35px;
-    display: inline-block;
-    padding-right: 5px;
-    transition: transform 0.2s ease-in;
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  padding-right: 5px;
+  transition: transform 0.2s ease-in;
 }
 
 #bi-bi-geo-alt > g > rect {
-    transition: fill 1s ease-in;
+  transition: fill 1s ease-in;
 }
 
 #bi-bi-geo-alt:hover {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-
 #tsparticles {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-    z-index: -1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 .hover-underline-animation {
-    /* display: inline-block; */
-    position: relative;
-    color: #fff
+  /* display: inline-block; */
+  position: relative;
+  color: #fff;
 }
 
 .hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #F9A6D2; 
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f9a6d2;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

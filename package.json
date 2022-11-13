@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.vue src"
   },
   "dependencies": {
-    "@material-tailwind/react": "^1.2.4",
     "bootstrap-icons": "^1.9.1",
     "framer-motion": "^7.3.2",
     "localforage": "^1.10.0",
@@ -18,24 +18,36 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.4.0",
     "react-loading": "^2.0.3",
-    "react-particles": "^2.2.4",
+    "react-particles": "^2.5.3",
     "react-router-dom": "^6.4.1",
     "react-router-hash-link": "^2.4.3",
     "react-scroll": "^1.8.8",
     "sort-by": "^1.2.0",
-    "tsparticles": "^2.2.4",
-    "tsparticles-engine": "^2.2.4",
+    "tsparticles": "^2.5.3",
     "tsparticles-shape-heart": "^2.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/react-scroll": "^1.8.4",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
     "@vitejs/plugin-react": "^2.1.0",
     "autoprefixer": "^10.4.8",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "install": "^0.13.0",
     "postcss": "^8.4.17",
     "postcss-import": "^15.0.0",
+    "prettier": "2.7.1",
     "tailwindcss": "^3.1.8",
+    "typescript": "^4.8.4",
     "vite": "^3.1.0"
   }
 }

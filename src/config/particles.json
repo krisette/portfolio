@@ -37,10 +37,28 @@
   },
   "particles": {
     "color": {
-      "value": ["#d58a94", "#d9969f", "#dda1a9", "#e2adb4", "#e6b9bf", "#eac5ca", "#f7e8ea", "#ffffff"]
+      "value": [
+        "#d58a94",
+        "#d9969f",
+        "#dda1a9",
+        "#e2adb4",
+        "#e6b9bf",
+        "#eac5ca",
+        "#f7e8ea",
+        "#ffffff"
+      ]
     },
     "links": {
-      "color": ["#c026d3", "#C526C4", "#C926B4", "#CE27A5", "#D22796", "#D72786", "#DB2777", "#ffffff"],
+      "color": [
+        "#c026d3",
+        "#C526C4",
+        "#C926B4",
+        "#CE27A5",
+        "#D22796",
+        "#D72786",
+        "#DB2777",
+        "#ffffff"
+      ],
       "distance": 72,
       "enable": false,
       "opacity": 1,
@@ -63,14 +81,14 @@
         "enable": true,
         "value_area": 800
       },
-      "value": 400  
+      "value": 400
     },
     "opacity": {
       "value": 0.7,
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 0.8      
+        "speed": 0.8
       }
     },
     "shape": {
