@@ -33,7 +33,7 @@ export default function Contact() {
         >
           <h1 className="text-gray-50 text-5xl md:text-6xl xl:text-7xl">
             let&apos;s{' '}
-            <span className="bg-gradient-to-r from-pink-100 to-pink-400 font-bold bg-clip-text text-transparent hover-underline-animation">
+            <span className="bg-gradient-to-r from-pink-200 to-pink-500 font-bold bg-clip-text text-transparent hover-underline-animation">
               connect
             </span>{' '}
             ✨

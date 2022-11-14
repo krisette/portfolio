@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import logo from '../assets/logo.png';
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -9,7 +10,9 @@ export default function NavBar() {
         <div>
           {/* logo left side */}
           <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
-            <a href="http://google.com">logo</a>
+            <a href="http://google.com">
+              <img src={logo} alt="logo" className="w-14 h-14" />
+            </a>
             {/* hamburger menu */}
             <div className="md:hidden">
               <button

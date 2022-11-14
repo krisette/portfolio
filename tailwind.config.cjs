@@ -10,7 +10,12 @@ module.exports = {
       lg: '1024px',
       xl: '1280px'
     },
-    extend: {}
+    extend: {
+      colors: {
+        lightpink: '#f8bbd0',
+        darkpink: '#ec407a'
+      }
+    }
   },
   plugins: []
 };

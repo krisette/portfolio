@@ -90,27 +90,22 @@ function Box({ project }: Props) {
       variants={boxVariant}
       initial="hidden"
       animate={control}
+      className="bg-zinc-600"
     >
-      <div className="flex">
-        <img className="h-48 object-cover" src={project.img_src} alt="" />
-      </div>
-      <div className="flex flex-1 flex-col text-white p-6 h-24">
-        <p className="text-xl font-semibold">{project.name}</p>
-        <p className="mt-3 text-base text-gray-500">{project.description}</p>
-      </div>
-      <div className="mt-6 flex items-center">
-        <p className="mt-3 text-base text-gray-500">{project.tech}</p>
-        <div className="ml-3">
-          <p className="text-sm font-medium text-white">
-            <a href={project.demo} className="hover:underline">
-              Demo
-            </a>
-          </p>
-          <div className="flex space-x-1 text-sm text-gray-500">
-            <a href={project.github} className="hover:underline">
-              GitHub
-            </a>
-          </div>
+      <div className="flex flex-col">
+        <div>
+          <img className="h-48" src={project.img_src} alt="" />
+        </div>
+        <div>
+          <p className="text-xl font-semibold">{project.name}</p>
+          <p className="mt-3 text-base text-gray-500">{project.description}</p>
+          <p className="mt-3 text-base text-gray-500">{project.tech}</p>
+          <a href={project.demo} className="hover:underline">
+            Demo
+          </a>
+          <a href={project.github} className="hover:underline">
+            GitHub
+          </a>
         </div>
       </div>
     </motion.div>
@@ -121,10 +116,10 @@ export default function Experience() {
   return (
     <Element
       name="experience"
-      className="flex flex-col items-center align-center"
+      className="flex flex-col items-center align-center mt-5"
     >
       <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2">
-        <span className="bg-gradient-to-r from-pink-100 to-pink-400 font-bold bg-clip-text text-transparent hover-underline-animation">
+        <span className="bg-gradient-to-r from-lightpink to-darkpink font-bold bg-clip-text text-transparent hover-underline-animation">
           experience
         </span>{' '}
         ✨

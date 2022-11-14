@@ -22,18 +22,18 @@ export default function Content() {
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
           style={{ y }}
-          className="flex flex-col items-center justify-center w-full h-[70vh] z-2"
+          className="flex flex-col items-center justify-center w-full h-[50vh] z-2"
         >
           <h1 className="text-gray-50 text-5xl md:text-6xl xl:text-7xl z-10">
             hi, i&apos;m{' '}
-            <span className="bg-gradient-to-r from-pink-100 to-pink-400 font-bold bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-lightpink to-darkpink font-bold bg-clip-text text-transparent">
               krisette
             </span>{' '}
             ✨
           </h1>
           <h2 className="text-gray-50 text-2xl md:text-2xl lg:text-4xl mt-2">
             software engineer{' '}
-            <span className="bg-gradient-to-r from-pink-100 to-pink-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-lightpink to-darkpink bg-clip-text text-transparent">
               +
             </span>{' '}
             RN

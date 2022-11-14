@@ -28,30 +28,30 @@ export default function AboutMe() {
         <div className="flex items-center justify-center text-white h-full md:h-5/6 ml-5 mr-5 md:m-5 lg:m-5 xl:m-5">
           {/* picture here */}
         </div>
-        <div className="flex flex-col items-center m-10 md:w-1/3 lg:w-1/2 xl:w-1/2 lg:text-xl xl:text-xl mt-5">
+        <div className="flex flex-col items-center m-10 md:w-full md:text-lg lg:w-1/2 xl:w-1/2 lg:text-xl xl:text-xl mt-5">
           <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2">
-            <span className="bg-gradient-to-r from-pink-100 to-pink-400 font-bold bg-clip-text text-transparent hover-underline-animation">
+            <span className="bg-gradient-to-r from-lightpink to-darkpink font-bold bg-clip-text text-transparent hover-underline-animation">
               about me
             </span>{' '}
             ✨
           </h1>
           <p className="text-gray-50 mb-5">
             Hello! I&apos;m{' '}
-            <span className="text-pink-100 font-bold">Krisette Odegard</span>{' '}
+            <span className="text-lightpink font-bold">Krisette Odegard</span>{' '}
             and I&apos;m based in Los Angeles, California. When I was a kid on
             the Internet, I loved making &quot;pet pages&quot; for my Neopets,
             so I taught myself HTML & CSS. Over time, this evolved to deploying
             personal blogs in high school (RIP mocha-latte.org). In 2016, I
             graduated from nursing school and began a career in health care as a
-            Registered Nurse. Life has a funny way of changing things up, and I{' '}
-            decided to revisit my childhood passion. Now I&apos;m a
-            <span className="text-pink-100 font-bold">
+            Registered Nurse. Life has a funny way of changing things up, and I
+            decided to revisit my childhood passion. Now I&apos;m a{' '}
+            <span className="text-lightpink font-bold">
               full-stack software engineer
-            </span>
+            </span>{' '}
             that specializes in{' '}
-            <span className="text-pink-100 font-bold">TypeScript</span>/
-            <span className="text-pink-100 font-bold">React</span>/
-            <span className="text-pink-100 font-bold">Node</span>.
+            <span className="text-lightpink font-bold">TypeScript</span>/
+            <span className="text-lightpink font-bold">React</span>/
+            <span className="text-lightpink font-bold">Node</span>.
           </p>
           <p className="text-gray-50 mb-5">
             In my spare time, I like playing video games like Final Fantasy XIV

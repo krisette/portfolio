@@ -27,6 +27,7 @@
     "tsparticles-shape-heart": "^2.2.4"
   },
   "devDependencies": {
+    "@material-tailwind/react": "^1.2.4",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/react-scroll": "^1.8.4",

@@ -14,7 +14,7 @@ export default function BackToTop() {
         type="button"
         data-mdb-ripple="true"
         data-mdb-ripple-color="light"
-        className="fixed bg-pink-100 text-black hover:text-white font-medium text-lg p-4 leading-tight uppercase rounded-full shadow-md hover:bg-pink-400 hover:shadow-lg focus:bg-pink-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-100 active:text-black active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
+        className="fixed bg-lightpink text-black hover:text-white font-medium text-lg p-4 leading-tight uppercase rounded-full shadow-md hover:bg-darkpink hover:shadow-lg focus:bg-pink-100 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-pink-100 active:text-black active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5"
         onClick={scrollToTop}
       >
         <svg
