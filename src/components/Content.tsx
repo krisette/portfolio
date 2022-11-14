@@ -26,7 +26,7 @@ export default function Content() {
         >
           <h1 className="text-gray-50 text-5xl md:text-6xl xl:text-7xl z-10">
             hi, i&apos;m{' '}
-            <span className="bg-gradient-to-r from-lightpink to-darkpink font-bold bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-lightpink to-darkpink font-bold bg-clip-text text-transparent hover-underline-animation">
               krisette
             </span>{' '}
             ✨
