@@ -11,7 +11,11 @@ export default function NavBar() {
           {/* logo left side */}
           <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
             <a href="http://krisette.io">
-              <img src={logo} alt="logo" className="w-14 h-14" />
+              <img
+                src={logo}
+                alt="logo of my initials by kiara45 on fiverr"
+                className="w-14 h-14"
+              />
             </a>
             {/* hamburger menu */}
             <div className="md:hidden">

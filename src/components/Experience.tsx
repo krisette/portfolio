@@ -9,27 +9,27 @@ import Ghost from '../assets/ghost.png';
 interface Props {
   project: {
     name: string;
-    img_src: string;
+    img_src?: string;
     description: string;
     tech: string;
-    demo: string;
-    github: string;
+    demo?: string;
+    github?: string;
   };
 }
 
 const projects = [
   {
-    name: 'Ghost',
+    name: 'ghost',
     img_src: Ghost,
     description: 'An AWS Lambda metrics visualizer. Accelerated by OSLabs.',
-    tech: 'Typescript, React, TailwindCSS, HTML5, MaterialUI, Electron, AWS-SDK',
+    tech: 'TypeScript, React, TailwindCSS, HTML5, MaterialUI, Electron, AWS-SDK',
     demo: 'https://github.com/oslabs-beta/ghost/releases/tag/v1.0.0',
     github: 'https://github.com/oslabs-beta/ghost'
   },
   {
-    name: 'Ghost Website',
+    name: 'ghost Website',
     img_src: GhostWebsite,
-    description: 'Static website for Ghost.',
+    description: 'Static website for ghost.',
     tech: 'Typescript, React, React Router, TailwindCSS, TailwindUI',
     demo: 'http://os-ghost.github.io/website',
     github: 'https://github.com/os-ghost/website'
@@ -48,7 +48,7 @@ const projects = [
     img_src: WelcomeHomeFriend,
     description:
       'A social media app to help owners find their furry friend once again.',
-    tech: 'React, PostgresQL, Node.js, Express, HTML5, MaterialUI',
+    tech: 'React, PostgresQL, Node.js, Express, MaterialUI',
     demo: '',
     github: 'https://github.com/WelcomeHomeFriend/welcome-home-friend'
   },
@@ -56,9 +56,15 @@ const projects = [
     name: 'Meet Me at the Spot',
     img_src: '',
     description: 'A social media app to share your favorite locations.',
-    tech: 'React, PostgresQL, Node.js, Express, HTML5, MaterialUI',
+    tech: 'React, PostgresQL, Node.js, Express, TailwindCSS',
     demo: '',
     github: 'https://github.com/MeetmeattheSpot/Meet-me-at-the-Spot'
+  },
+  {
+    name: 'whatsnext',
+    img_src: '',
+    description: 'A mood journal & goals tracker.',
+    tech: 'React, Next.js, PostgresQL, Node.js, Express, TailwindCSS'
   }
 ];
 
@@ -90,20 +96,27 @@ function Box({ project }: Props) {
       variants={boxVariant}
       initial="hidden"
       animate={control}
-      className="bg-zinc-600"
+      className="w-96 mt-10"
     >
       <div className="flex flex-col">
         <div>
           <img className="h-48" src={project.img_src} alt="" />
         </div>
         <div>
-          <p className="text-xl font-semibold">{project.name}</p>
-          <p className="mt-3 text-base text-gray-500">{project.description}</p>
+          <p className="text-xl font-semibold text-white">{project.name}</p>
+          <p className="mt-3 text-base text-gray-200">{project.description}</p>
           <p className="mt-3 text-base text-gray-500">{project.tech}</p>
-          <a href={project.demo} className="hover:underline">
+          <a
+            href={project.demo}
+            className="text-gray-50 hover-underline-animation"
+          >
             Demo
-          </a>
-          <a href={project.github} className="hover:underline">
+          </a>{' '}
+          ||
+          <a
+            href={project.github}
+            className="text-gray-50 hover-underline-animation"
+          >
             GitHub
           </a>
         </div>
@@ -116,7 +129,7 @@ export default function Experience() {
   return (
     <Element
       name="experience"
-      className="flex flex-col items-center align-center mt-5"
+      className="flex flex-col items-center align-center mt-5 mb-10"
     >
       <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2">
         <span className="bg-gradient-to-r from-lightpink to-darkpink font-bold bg-clip-text text-transparent hover-underline-animation">
