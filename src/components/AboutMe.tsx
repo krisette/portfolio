@@ -58,7 +58,7 @@ export default function AboutMe() {
             and Stardew Valley, watching anime/TV/movies, and trying new
             restaurants. I also love Disney theme parks; it&apos;s my goal to go
             to every single Disney park in the world. (If you&apos;re wondering,
-            I&apos;m currently 3/7: I&apos;ve been to Disneyland, Disney World,
+            I&apos;m currently 3/6: I&apos;ve been to Disneyland, Disney World,
             and Tokyo Disney so far.)
           </p>
           <p className="text-white mb-5 text-justify">

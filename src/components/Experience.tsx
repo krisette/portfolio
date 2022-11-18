@@ -22,7 +22,7 @@ const projects = [
     name: 'ghost',
     img_src: Ghost,
     description: 'An AWS Lambda metrics visualizer. Accelerated by OSLabs.',
-    tech: 'TypeScript, React, TailwindCSS, HTML5, MaterialUI, Electron, AWS-SDK',
+    tech: 'TypeScript, React, TailwindCSS, MaterialUI, Chart.js, Node.js, Express, Electron, AWS-SDK, AWS Lambda',
     demo: 'https://github.com/oslabs-beta/ghost/releases/tag/v1.0.0',
     github: 'https://github.com/oslabs-beta/ghost'
   },
@@ -39,7 +39,7 @@ const projects = [
     img_src: '',
     description:
       'A trip management/planning app for your magical Disney adventures.',
-    tech: 'React, MongoDB, Node.js, Express, HTML5, Sass',
+    tech: 'React, Sass, Node.js, Express, MongoDB',
     demo: '',
     github: 'https://github.com/krisette/imagine'
   },
@@ -48,7 +48,7 @@ const projects = [
     img_src: WelcomeHomeFriend,
     description:
       'A social media app to help owners find their furry friend once again.',
-    tech: 'React, PostgresQL, Node.js, Express, MaterialUI',
+    tech: 'React, PostgreSQL, Node.js, Express, MaterialUI',
     demo: '',
     github: 'https://github.com/WelcomeHomeFriend/welcome-home-friend'
   },
@@ -56,7 +56,7 @@ const projects = [
     name: 'Meet Me at the Spot',
     img_src: '',
     description: 'A social media app to share your favorite locations.',
-    tech: 'React, PostgresQL, Node.js, Express, TailwindCSS',
+    tech: 'React, PostgreSQL, Node.js, Express, TailwindCSS',
     demo: '',
     github: 'https://github.com/MeetmeattheSpot/Meet-me-at-the-Spot'
   },
@@ -64,7 +64,7 @@ const projects = [
     name: 'whatsnext',
     img_src: '',
     description: 'A mood journal & goals tracker.',
-    tech: 'React, Next.js, PostgresQL, Node.js, Express, TailwindCSS'
+    tech: 'React, Next.js, PostgreSQL, Node.js, Express, TailwindCSS'
   }
 ];
 
