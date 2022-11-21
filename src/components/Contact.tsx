@@ -29,7 +29,7 @@ export default function Contact() {
             hidden: { opacity: 0, scale: 1 }
           }}
           style={{ y }}
-          className="flex flex-col items-center justify-center w-full mb-16"
+          className="flex flex-col items-center justify-center w-full mb-20"
         >
           <h1 className="text-gray-50 text-5xl md:text-6xl xl:text-7xl">
             let&apos;s{' '}
