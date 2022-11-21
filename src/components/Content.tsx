@@ -36,7 +36,7 @@ export default function Content() {
             <span className="bg-gradient-to-r from-lightpink to-darkpink bg-clip-text text-transparent">
               +
             </span>{' '}
-            RN
+            traveler
           </h2>
           <h3 className="text-gray-50 mt-8 text-1xl md:text-1xl lg:text-2xl">
             <svg

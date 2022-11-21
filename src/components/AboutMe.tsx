@@ -41,10 +41,9 @@ export default function AboutMe() {
             and I&apos;m based in Los Angeles, California. When I was a kid on
             the Internet, I loved making &quot;pet pages&quot; for my Neopets,
             so I taught myself HTML & CSS. Over time, this evolved to deploying
-            personal blogs in high school (RIP mocha-latte.org). In 2016, I
-            graduated from nursing school and began a career in health care as a
-            Registered Nurse. Life has a funny way of changing things up, and I
-            decided to revisit my childhood passion. Now I&apos;m a{' '}
+            personal blogs in high school (RIP mocha-latte.org). In my past
+            life, I was a Registered Nurse, but the universe has a funny way of
+            changing things up. Now I&apos;m a{' '}
             <span className="text-lightpink font-bold">
               full-stack software engineer
             </span>{' '}
@@ -55,11 +54,11 @@ export default function AboutMe() {
           </p>
           <p className="text-gray-50 mb-5">
             In my spare time, I like playing video games like Final Fantasy XIV
-            and Stardew Valley, watching anime/TV/movies, and trying new
-            restaurants. I also love Disney theme parks; it&apos;s my goal to go
-            to every single Disney park in the world. (If you&apos;re wondering,
-            I&apos;m currently 3/6: I&apos;ve been to Disneyland, Disney World,
-            and Tokyo Disney so far.)
+            and Stardew Valley, watching anime/TV/movies, traveling, and trying
+            new restaurants. I also love Disney theme parks; it&apos;s my goal
+            to go to every single Disney park in the world. (If you&apos;re
+            wondering, I&apos;m currently 3/6: I&apos;ve been to Disneyland,
+            Disney World, and Tokyo Disney so far.)
           </p>
           <p className="text-white mb-5 text-justify">
             Here are some of the technologies I’ve been working with recently:
