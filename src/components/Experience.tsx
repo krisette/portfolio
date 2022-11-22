@@ -2,14 +2,21 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Element } from 'react-scroll';
+import ghost from '../assets/ghost.png';
+import ghostAnim from '../assets/ghost_animated.gif';
+import ghostWebsite from '../assets/ghost_website.png';
+import ghostWebsiteAnim from '../assets/ghost_website_animated.gif';
+import Imagine from '../assets/imagine.png';
+import ImagineAnim from '../assets/imagine_animated.gif';
 import WelcomeHomeFriend from '../assets/welcome_home_friend.png';
-import GhostWebsite from '../assets/ghost_website.png';
-import Ghost from '../assets/ghost.png';
+import MeetMeAtTheSpot from '../assets/meetmeatthespot.png';
+import whatsnext from '../assets/whatsnext.png';
 
 interface Props {
   project: {
     name: string;
     img_src?: string;
+    img_anim?: string;
     description: string;
     tech: string;
     demo?: string;
@@ -20,15 +27,17 @@ interface Props {
 const projects = [
   {
     name: 'ghost',
-    img_src: Ghost,
-    description: 'An AWS Lambda metrics visualizer. Accelerated by OSLabs.',
+    img_src: ghost,
+    img_anim: ghostAnim,
+    description: 'AWS Lambda metrics monitoring tool. Accelerated by OSLabs.',
     tech: 'TypeScript, React, TailwindCSS, MaterialUI, Chart.js, Node.js, Express, Electron, AWS-SDK, AWS Lambda',
     demo: 'https://github.com/oslabs-beta/ghost/releases/tag/v1.0.0',
     github: 'https://github.com/oslabs-beta/ghost'
   },
   {
     name: 'ghost Website',
-    img_src: GhostWebsite,
+    img_src: ghostWebsite,
+    img_anim: ghostWebsiteAnim,
     description: 'Static website for ghost.',
     tech: 'Typescript, React, React Router, TailwindCSS, TailwindUI',
     demo: 'http://os-ghost.github.io/website',
@@ -36,16 +45,18 @@ const projects = [
   },
   {
     name: 'Imagine',
-    img_src: '',
+    img_src: Imagine,
+    img_anim: ImagineAnim,
     description:
       'A trip management/planning app for your magical Disney adventures.',
-    tech: 'React, Sass, Node.js, Express, MongoDB',
+    tech: 'v1: React, Sass, Node.js, Express, MongoDB',
     demo: '',
     github: 'https://github.com/krisette/imagine'
   },
   {
     name: 'Welcome Home, Friend',
     img_src: WelcomeHomeFriend,
+    img_anim: WelcomeHomeFriend,
     description:
       'A social media app to help owners find their furry friend once again.',
     tech: 'React, PostgreSQL, Node.js, Express, MaterialUI',
@@ -54,7 +65,8 @@ const projects = [
   },
   {
     name: 'Meet Me at the Spot',
-    img_src: '',
+    img_src: MeetMeAtTheSpot,
+    img_anim: MeetMeAtTheSpot,
     description: 'A social media app to share your favorite locations.',
     tech: 'React, PostgreSQL, Node.js, Express, TailwindCSS',
     demo: '',
@@ -62,8 +74,10 @@ const projects = [
   },
   {
     name: 'whatsnext',
-    img_src: '',
-    description: 'A mood journal & goals tracker.',
+    img_src: whatsnext,
+    img_anim: whatsnext,
+    description: `A calendar app that allows users to write down their thoughts, track their mood, and set goals from day to day.`,
+    demo: '',
     tech: 'React, Next.js, PostgreSQL, Node.js, Express, TailwindCSS'
   }
 ];
@@ -90,6 +104,11 @@ function Box({ project }: Props) {
     }
   }, [control, inView]);
 
+  // change image to animated gif on hover
+  const [hoverOn, setHoverOn] = React.useState(false);
+  const toggleHoverOn = () => setHoverOn(true);
+  const toggleHoverOff = () => setHoverOn(false);
+
   return (
     <motion.div
       ref={ref}
@@ -99,20 +118,27 @@ function Box({ project }: Props) {
       className="w-96 mt-10"
     >
       <div className="flex flex-col">
-        <div>
-          <img className="h-48" src={project.img_src} alt="" />
+        <div className="flex items-center justify-center">
+          <img
+            className="h-48 rounded-lg hover:cursor-pointer hover:scale-125"
+            src={hoverOn ? project.img_anim : project.img_src}
+            alt=""
+            onMouseEnter={toggleHoverOn}
+            onMouseLeave={toggleHoverOff}
+          />
         </div>
-        <div>
+        <div className="bg-zinc-600 bg-opacity-60 w-96 p-5 rounded-lg">
           <p className="text-xl font-semibold text-white">{project.name}</p>
-          <p className="mt-3 text-base text-gray-200">{project.description}</p>
-          <p className="mt-3 text-base text-gray-500">{project.tech}</p>
-          <a
-            href={project.demo}
-            className="text-gray-50 hover-underline-animation"
-          >
-            Demo
-          </a>{' '}
-          ||
+          <p className="mt-3 text-base text-zinc-200">{project.description}</p>
+          <p className="my-3 text-base text-zinc-400">{project.tech}</p>
+          {project.demo !== '' && (
+            <a
+              href={project.demo}
+              className="text-gray-50 hover-underline-animation"
+            >
+              Demo
+            </a>
+          )}{' '}
           <a
             href={project.github}
             className="text-gray-50 hover-underline-animation"
@@ -137,9 +163,11 @@ export default function Experience() {
         </span>{' '}
         ✨
       </h1>
-      {projects.map((project) => (
-        <Box key={project.name} project={project} />
-      ))}
+      <div className="grid grid-cols-2 gap-10">
+        {projects.map((project) => (
+          <Box key={project.name} project={project} />
+        ))}
+      </div>
     </Element>
   );
 }
