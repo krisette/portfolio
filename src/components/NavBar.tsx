@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import logo from '../assets/logo.png';
+import resume from '../assets/KrisetteOdegard_Resume.pdf';
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -82,7 +83,7 @@ export default function NavBar() {
               </li>
               <li className="text-white hover:text-pink-200">
                 <a
-                  href="_blank"
+                  href={resume}
                   className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
                 >
                   Download Resume

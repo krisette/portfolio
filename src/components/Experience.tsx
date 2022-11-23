@@ -39,7 +39,7 @@ const projects = [
     img_src: ghostWebsite,
     img_anim: ghostWebsiteAnim,
     description: 'Static website for ghost.',
-    tech: 'Typescript, React, React Router, TailwindCSS, TailwindUI',
+    tech: 'TypeScript, React, React Router, TailwindCSS, TailwindUI',
     demo: 'http://os-ghost.github.io/website',
     github: 'https://github.com/os-ghost/website'
   },
@@ -49,7 +49,7 @@ const projects = [
     img_anim: ImagineAnim,
     description:
       'A trip management/planning app for your magical Disney adventures.',
-    tech: 'v1: React, Sass, Node.js, Express, MongoDB',
+    tech: 'React, Sass, Node.js, Express, MongoDB',
     demo: '',
     github: 'https://github.com/krisette/imagine'
   },
@@ -68,7 +68,7 @@ const projects = [
     img_src: MeetMeAtTheSpot,
     img_anim: MeetMeAtTheSpot,
     description: 'A social media app to share your favorite locations.',
-    tech: 'React, PostgreSQL, Node.js, Express, TailwindCSS',
+    tech: 'React, PostgreSQL, Node.js, Express, TailwindCSS, Google Maps API',
     demo: '',
     github: 'https://github.com/MeetmeattheSpot/Meet-me-at-the-Spot'
   },
