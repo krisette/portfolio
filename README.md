@@ -10,5 +10,6 @@ my portfolio website, updating as i go along
 - bootstrap icons
 - framer-motion
 - react-scroll
+- react-type-animation
 - tsparticles
 - vite
