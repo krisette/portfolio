@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Content() {
   const { scrollY } = useScroll();
@@ -36,7 +37,24 @@ export default function Content() {
             <span className="bg-gradient-to-r from-lightpink to-darkpink bg-clip-text text-transparent">
               +
             </span>{' '}
-            traveler
+            <TypeAnimation
+              sequence={[
+                'traveler',
+                2000,
+                'disney park enthusiast',
+                2000,
+                'FFXIV reaper main',
+                2000,
+                'cat mom',
+                2000,
+                'former RN',
+                2000,
+                'nap aficionado',
+                2000
+              ]}
+              wrapper="span"
+              repeat={Infinity}
+            />
           </h2>
           <h3 className="text-gray-50 mt-8 text-1xl md:text-1xl lg:text-2xl">
             <svg
