@@ -13,3 +13,8 @@ my portfolio website, updating as i go along
 - react-type-animation
 - tsparticles
 - vite
+
+## roadmap
+
+- [ ] improve mobile design on experience section
+- [ ] continue refactoring for accessibility
