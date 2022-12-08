@@ -1,9 +1,7 @@
 ## portfolio
-
 my portfolio website, updating as i go along
 
 ## built with...
-
 - typescript
 - react
 - tailwindcss
@@ -15,6 +13,5 @@ my portfolio website, updating as i go along
 - vite
 
 ## roadmap
-
 - [ ] improve mobile design on experience section
 - [ ] continue refactoring for accessibility

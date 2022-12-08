@@ -17,6 +17,7 @@ interface Props {
     name: string;
     img_src?: string;
     img_anim?: string;
+    role: string;
     description: string;
     tech: string;
     demo?: string;
@@ -29,6 +30,7 @@ const projects = [
     name: 'ghost',
     img_src: ghost,
     img_anim: ghostAnim,
+    role: 'Front End',
     description: 'AWS Lambda metrics monitoring tool. Accelerated by OSLabs.',
     tech: 'TypeScript, React, TailwindCSS, MaterialUI, Chart.js, Node.js, Express, Electron, AWS-SDK, AWS Lambda',
     demo: 'https://github.com/oslabs-beta/ghost/releases/tag/v1.0.0',
@@ -38,6 +40,7 @@ const projects = [
     name: 'ghost Website',
     img_src: ghostWebsite,
     img_anim: ghostWebsiteAnim,
+    role: 'Front End',
     description: 'Static website for ghost.',
     tech: 'TypeScript, React, React Router, TailwindCSS, TailwindUI',
     demo: 'http://os-ghost.github.io/website',
@@ -47,6 +50,7 @@ const projects = [
     name: 'Imagine',
     img_src: Imagine,
     img_anim: ImagineAnim,
+    role: 'Full Stack',
     description:
       'A trip management/planning app for your magical Disney adventures.',
     tech: 'React, Sass, Node.js, Express, MongoDB',
@@ -57,6 +61,7 @@ const projects = [
     name: 'Welcome Home, Friend',
     img_src: WelcomeHomeFriend,
     img_anim: WelcomeHomeFriend,
+    role: 'Front End',
     description:
       'A social media app to help owners find their furry friend once again.',
     tech: 'React, PostgreSQL, Node.js, Express, MaterialUI',
@@ -67,6 +72,7 @@ const projects = [
     name: 'Meet Me at the Spot',
     img_src: MeetMeAtTheSpot,
     img_anim: MeetMeAtTheSpot,
+    role: 'Back End',
     description: 'A social media app to share your favorite locations.',
     tech: 'React, PostgreSQL, Node.js, Express, TailwindCSS, Google Maps API',
     demo: '',
@@ -76,6 +82,7 @@ const projects = [
     name: 'whatsnext',
     img_src: whatsnext,
     img_anim: whatsnext,
+    role: 'Back End',
     description: `A calendar app that allows users to write down their thoughts, track their mood, and set goals from day to day.`,
     demo: '',
     tech: 'React, Next.js, PostgreSQL, Node.js, Express, TailwindCSS'
@@ -92,7 +99,7 @@ const boxVariant = {
   hidden: { opacity: 0, scale: 1, x: -500 }
 };
 
-function Box({ project }: Props) {
+function AnimatedBox({ project }: Props) {
   const control = useAnimation();
   const [ref, inView] = useInView();
 
@@ -115,7 +122,7 @@ function Box({ project }: Props) {
       variants={boxVariant}
       initial="hidden"
       animate={control}
-      className="w-96 mt-10"
+      className="w-20 lg:w-96 xl:w-96 lg:mt-10 xl:mt-10"
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-center">
@@ -128,7 +135,10 @@ function Box({ project }: Props) {
           />
         </div>
         <div className="bg-zinc-600 bg-opacity-60 w-96 p-5 rounded-lg">
-          <p className="text-xl font-semibold text-white">{project.name}</p>
+          <p className="text-xl text-white">
+            <span className="font-semibold">{project.name}</span>{' '}
+            <span className="text-zinc-400">({project.role})</span>
+          </p>
           <p className="mt-3 text-base text-zinc-200">{project.description}</p>
           <p className="my-3 text-base text-zinc-400">{project.tech}</p>
           {project.demo !== '' && (
@@ -151,6 +161,35 @@ function Box({ project }: Props) {
   );
 }
 
+function RegularBox({ project }: Props) {
+  return (
+    <div className="flex flex-col mb-10">
+      <div className="flex items-center justify-center">
+        <img className="h-48 rounded-lg" src={project.img_src} alt="" />
+      </div>
+      <div className="bg-zinc-600 bg-opacity-60 w-96 p-5 rounded-lg mx-5">
+        <p className="text-xl font-semibold text-white">{project.name}</p>
+        <p className="mt-3 text-base text-zinc-200">{project.description}</p>
+        <p className="my-3 text-base text-zinc-400">{project.tech}</p>
+        {project.demo !== '' && (
+          <a
+            href={project.demo}
+            className="text-gray-50 hover-underline-animation"
+          >
+            Demo
+          </a>
+        )}{' '}
+        <a
+          href={project.github}
+          className="text-gray-50 hover-underline-animation"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export default function Experience() {
   return (
     <Element
@@ -163,9 +202,14 @@ export default function Experience() {
         </span>{' '}
         ✨
       </h1>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="hidden md:hidden lg:grid xl:grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10">
         {projects.map((project) => (
-          <Box key={project.name} project={project} />
+          <AnimatedBox key={project.name} project={project} />
+        ))}
+      </div>
+      <div className="lg:hidden xl:hidden">
+        {projects.map((project) => (
+          <RegularBox key={project.name} project={project} />
         ))}
       </div>
     </Element>

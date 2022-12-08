@@ -54,6 +54,7 @@ export default function Content() {
               ]}
               wrapper="span"
               repeat={Infinity}
+              style={{}}
             />
           </h2>
           <h3 className="text-gray-50 mt-8 text-1xl md:text-1xl lg:text-2xl">
