@@ -53,7 +53,7 @@ const projects = [
     role: 'Full Stack',
     description:
       'A trip management/planning app for your magical Disney adventures.',
-    tech: 'React, Sass, Node.js, Express, MongoDB',
+    tech: 'v1: React, Sass, Node.js, Express, MongoDB; v2: React, Sass, Node/Express, MongoDB, Redux, GraphQL',
     demo: '',
     github: 'https://github.com/krisette/imagine'
   },

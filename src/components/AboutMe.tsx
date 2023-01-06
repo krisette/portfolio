@@ -66,8 +66,8 @@ export default function AboutMe() {
           <div className="flex flex-row flex-wrap justify-center">
             <div>
               <ul className="text-gray-50 mr-2">
-                <li>✨ Node.js</li>
-                <li>✨ Express</li>
+                <li>✨ Node.js/Express</li>
+                <li>✨ GraphQL</li>
                 <li>✨ TypeScript</li>
                 <li>✨ JavaScript (ES6+)</li>
                 <li>✨ React (Hooks/Router)</li>
