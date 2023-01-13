@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Element } from 'react-scroll';
+import chibi from '../assets/Krisette_by_doki.png';
 
 export default function AboutMe() {
   const { scrollY } = useScroll();
@@ -26,7 +27,9 @@ export default function AboutMe() {
         className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center h-screen"
       >
         <div className="flex items-center justify-center text-white h-full md:h-5/6 ml-5 mr-5 md:m-5 lg:m-5 xl:m-5">
-          {/* picture here */}
+          <a href="https://ko-fi.com/doki_" target="_blank" rel="noreferrer">
+            <img src={chibi} alt="chibi art by doki" className="h-96 w-96" />
+          </a>
         </div>
         <div className="flex flex-col items-center m-10 md:w-full md:text-lg lg:w-1/2 xl:w-1/2 lg:text-xl xl:text-xl mt-5">
           <h1 className="text-3xl md:text-4xl xl:text-5xl mb-2">
