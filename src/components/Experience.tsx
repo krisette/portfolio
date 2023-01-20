@@ -55,7 +55,7 @@ const projects = [
       'A trip management/planning app for your magical Disney adventures.',
     tech: 'v1: React, Sass, Node.js, Express, MongoDB; v2: React, Sass, Node/Express, MongoDB, Redux, GraphQL',
     demo: '',
-    github: 'https://github.com/krisette/imagine'
+    github: 'https://github.com/krisette/imagine/tree/v2'
   },
   {
     name: 'Welcome Home, Friend',
