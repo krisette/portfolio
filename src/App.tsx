@@ -42,13 +42,13 @@ function App() {
         options={particlesOptions as ISourceOptions}
         init={particlesInit}
       />
-      <NavBar />
+      {/* <NavBar /> */}
       <Content />
-      <AboutMe />
-      <Experience />
-      <Contact />
-      <Links />
-      {showButton ? <BackToTop /> : null}
+      {/* <AboutMe /> */}
+      {/* <Experience /> */}
+      {/* <Contact /> */}
+      {/* <Links /> */}
+      {/* {showButton ? <BackToTop /> : null} */}
     </div>
   );
 }

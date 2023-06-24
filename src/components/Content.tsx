@@ -33,8 +33,8 @@ export default function Content() {
             ✨
           </h1>
           <h2 className="text-gray-50 text-2xl md:text-2xl lg:text-4xl mt-2">
-            software engineer{' '}
-            <span className="bg-gradient-to-r from-lightpink to-darkpink bg-clip-text text-transparent">
+            website under construction
+            {/* <span className="bg-gradient-to-r from-lightpink to-darkpink bg-clip-text text-transparent">
               +
             </span>{' '}
             <TypeAnimation
@@ -55,9 +55,9 @@ export default function Content() {
               wrapper="span"
               repeat={Infinity}
               style={{}}
-            />
+            /> */}
           </h2>
-          <h3 className="text-gray-50 mt-8 text-1xl md:text-1xl lg:text-2xl">
+          {/* <h3 className="text-gray-50 mt-8 text-1xl md:text-1xl lg:text-2xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -70,7 +70,7 @@ export default function Content() {
               <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
             </svg>
             los angeles
-          </h3>
+          </h3> */}
         </motion.div>
       </div>
     </div>
