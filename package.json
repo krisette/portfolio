@@ -19,7 +19,7 @@
     "react-intersection-observer": "^9.4.0",
     "react-loading": "^2.0.3",
     "react-particles": "^2.5.3",
-    "react-router-dom": "^6.4.1",
+    "react-router-dom": "^6.16.0",
     "react-router-hash-link": "^2.4.3",
     "react-scroll": "^1.8.8",
     "react-type-animation": "^2.1.2",
