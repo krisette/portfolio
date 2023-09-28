@@ -1,0 +1,32 @@
+{
+  "name": "portfolio_v2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.7.2",
+    "@commitlint/config-conventional": "17.7.0",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "commitlint": "17.7.2",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "husky": "^8.0.3",
+    "postcss": "latest",
+    "prettier": "3.0.3",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
