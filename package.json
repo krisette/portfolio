@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "latest",
@@ -14,8 +15,8 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.7.2",
-    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -24,9 +25,14 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "postcss": "latest",
     "prettier": "3.0.3",
     "tailwindcss": "latest",
     "typescript": "latest"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
