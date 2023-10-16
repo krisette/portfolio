@@ -22,7 +22,7 @@
     "react-router-dom": "^6.4.1",
     "react-router-hash-link": "^2.4.3",
     "react-scroll": "^1.8.8",
-    "react-type-animation": "^2.1.2",
+    "react-type-animation": "^3.2.0",
     "sort-by": "^1.2.0",
     "tsparticles": "^2.5.3",
     "tsparticles-shape-heart": "^2.2.4"
