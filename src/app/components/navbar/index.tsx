@@ -59,7 +59,7 @@ export function NavBar() {
                 <a href="/about">About Me</a>
               </li>
               <li className="hover-underline-animation cursor-pointer">
-                <a href="/experience">Experience</a>
+                <a href="/projects">Projects</a>
               </li>
               <li className="hover-underline-animation cursor-pointer">
                 {/* <Link to="contact" smooth> */}

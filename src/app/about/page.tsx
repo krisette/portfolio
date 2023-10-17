@@ -61,11 +61,11 @@ export default function About() {
     <main className="flex flex-col">
       <div className="flex flex-col justify-center items-center lg:px-16 px-4 py-6">
         <div className="w-full max-w-5xl">
-          <div className="text-4xl font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <div className="text-3xl font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             About Me
           </div>
 
-          <div className="py-2">
+          <div className="py-3">
             I&#39;m Krisette. I specialize in front-end development, using
             TypeScript & JavaScript to create clean and user-friendly
             interfaces. While my heart lies at the front, I&#39;m no stranger to
@@ -94,7 +94,7 @@ export default function About() {
             , a health care staffing recruitment platform, and extending the
             traveler experience with our iOS and Android app
           </div>
-          <div className="relative inline-block mt-4">
+          <div className="relative inline-block mt-6">
             <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
             <span className="relative text-xl font-bold z-10 uppercase">
               🎮 WHEN I&#39;M NOT CODING...
@@ -106,7 +106,7 @@ export default function About() {
             restaurants
           </div>
 
-          <div className="relative inline-block mt-4">
+          <div className="relative inline-block mt-6">
             <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
             <span className="relative text-xl font-bold z-10 uppercase">
               📝 SKILLS
