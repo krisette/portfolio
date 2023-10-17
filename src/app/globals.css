@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* masonry.css */
-
 .grid-sizer,
 .project-card {
-  width: 100%; /* Adjust as per your requirement, e.g., 33.33% for 3 columns */
+  width: 100%;
 }
 
-/* For more control over responsive breakpoints, you can add: */
 @media screen and (min-width: 640px) {
   .grid-sizer,
   .project-card {
