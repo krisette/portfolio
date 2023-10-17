@@ -3,8 +3,7 @@ const nextConfig = {
   output: "export",
   distDir: "dist",
   images: {
-    loader: "imgix",
-    path: "/",
+    unoptimized: true,
   },
 };
 
