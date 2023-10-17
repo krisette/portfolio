@@ -61,7 +61,7 @@ export default function About() {
     <main className="flex flex-col">
       <div className="flex flex-col justify-center items-center lg:px-16 px-4 py-6">
         <div className="w-full max-w-5xl">
-          <div className="text-3xl font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <div className="flex text-2xl font-bold uppercase text-accent-lightest pb-3 items-center justify-center">
             About Me
           </div>
 
@@ -102,8 +102,8 @@ export default function About() {
           </div>
           <div>
             Catch me playing video games like Baldur&#39;s Gate 3 and Stardew
-            Valley, watching anime/TV/movies, traveling, and trying new
-            restaurants
+            Valley, watching anime/TV/movies, traveling, eating, visiting Disney
+            parks all over the world (currently 4/6)
           </div>
 
           <div className="relative inline-block mt-6">

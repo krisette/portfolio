@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { HiSparkles } from "react-icons/hi";
 
 export function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -8,7 +9,9 @@ export function NavBar() {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
-            <a href="/">KMO</a>
+            <a href="/">
+              <HiSparkles size={40} className="text-tertiary" />
+            </a>
             <div className="md:hidden">
               <button
                 type="button"
@@ -62,17 +65,15 @@ export function NavBar() {
                 <a href="/projects">Projects</a>
               </li>
               <li className="hover-underline-animation cursor-pointer">
-                {/* <Link to="contact" smooth> */}
-                Contact
-                {/* </Link> */}
+                <a href="/contact">Contact</a>
               </li>
               <li className="text-white hover:text-pink-200">
-                {/* <a
-                  href={resume}
+                <a
+                  href="/documents/Resume.pdf"
                   className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
-                > */}
-                Download Resume
-                {/* </a> */}
+                >
+                  Download Resume
+                </a>
               </li>
             </ul>
           </div>

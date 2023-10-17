@@ -1,6 +1,11 @@
 import React from "react";
 
-function SkillPill({ name, Icon }) {
+interface Props {
+  name: string;
+  Icon?: React.ComponentType<any>;
+}
+
+function SkillPill({ name, Icon }: Props) {
   return (
     <div className="relative overflow-hidden bg-transparent border-2 border-secondary text-white p-2 rounded-lg flex items-center group m-1 lg:m-2">
       <div className="z-10 flex items-center space-x-2">

@@ -21,7 +21,7 @@ export default function Projects() {
         "A platform empowering healthcare travelers to choose from thousands of jobs",
     },
     {
-      name: "Fusion Marketplace Mobile",
+      name: "FMP Mobile",
       imageSrc: "/images/FusionMarketplaceMobile.gif",
       techStack: [
         "TypeScript",
@@ -29,6 +29,7 @@ export default function Projects() {
         "Tanstack Query",
         "TailwindCSS (NativeWind)",
         "Jotai",
+        "React Hook Form",
         "Storybook",
       ],
       liveLink: "https://apps.apple.com/us/app/fusion-marketplace/id1614957866",
@@ -65,19 +66,53 @@ export default function Projects() {
       liveLink: "https://ghost-metrics.io",
       description: "Static website for ghost",
     },
+    {
+      name: "Imagine",
+      imageSrc: "/images/Imagine.png",
+      techStack: [
+        "React",
+        "Sass",
+        "Node/Express",
+        "MongoDB",
+        "Redux",
+        "GraphQL",
+      ],
+      liveLink: "https://github.com/krisette/imagine/tree/v2",
+      description:
+        "A trip management/planning app for your magical Disney adventures",
+    },
+    {
+      name: "whatsnext",
+      imageSrc: "/images/whatsnext.png",
+      techStack: [
+        "React",
+        "Next.js",
+        "PostgreSQL",
+        "Node.js",
+        "Express",
+        "TailwindCSS",
+      ],
+      liveLink: "https://github.com/InnoLVKB/whatsnext",
+      description:
+        "A calendar app that allows users to write down their thoughts, track their mood, and set goals from day to day",
+    },
   ];
+  const masonryRef = useRef(null);
 
   useEffect(() => {
-    // Load Masonry.js and initialize it on the client side
-    const Masonry = require("masonry-layout");
+    if (typeof window !== "undefined") {
+      const Masonry = require("masonry-layout");
+      const imagesLoaded = require("imagesloaded");
 
-    const grid = document.querySelector(".project-card");
-    if (grid) {
-      const masonry = new Masonry(grid, {
-        itemSelector: ".project-card",
-        columnWidth: ".grid-sizer",
-        percentPosition: true,
-      });
+      if (masonryRef.current) {
+        imagesLoaded(masonryRef.current, function () {
+          new Masonry(masonryRef.current, {
+            itemSelector: ".project-card",
+            percentPosition: true,
+            gutter: 20,
+          });
+        });
+      }
     }
   }, []);
 
@@ -85,12 +120,13 @@ export default function Projects() {
     <main className="flex flex-col">
       <div className="flex flex-col justify-center items-center lg:px-16 px-4 py-6">
         <div className="w-full max-w-5xl">
-          <div className="text-2xl font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <div className="flex text-2xl font-bold uppercase text-accent-lightest pb-3 items-center justify-center">
             Projects
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div ref={masonryRef} className="masonry-container">
+            <div className="grid-sizer"></div>
             {projects.map((project, index) => (
-              <div key={index} className="project-card">
+              <div key={index} className="project-card transition mb-4">
                 <ProjectCard key={index} {...project} />
               </div>
             ))}
