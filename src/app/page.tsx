@@ -1,21 +1,27 @@
-import Image from 'next/image'
-
 export default function Home() {
   return (
-    <main className="flex-col">
-      <div className="items-center">
-      <div className="max-w-5xl w-full items-center font-mono text-3xl lg:flex">
-        {`hi, i'm krisette`} ✨
+    <main className="flex flex-col overflow-hidden">
+      <div className="flex-grow flex flex-col mt-4 lg:mt-4 justify-center items-center px-2 lg:px-16 min-h-screen">
+        <div className="flex flex-col lg:flex-row w-full text-center lg:text-left flex-wrap justify-center items-center">
+          <div className="flex-grow mb-4 lg:mb-0 lg:order-last">PICTURE</div>
+          <div className="flex flex-col lg:pr-8 w-full lg:w-auto">
+            <span className="text-2xl lg:ml-[2px]">Hello, my name is</span>
+            <span className="text-4xl lg:text-6xl font-bold lg:-mt-2 uppercase bg-gradient-to-r from-[#616758] to-[#99a693] bg-clip-text text-transparent">
+              Krisette Odegard
+            </span>
+            <span className="text-2xl lg:-mt-2 lg:ml-[2px] overflow-x-hidden">
+              and I&#39;m a{" "}
+              <div className="relative inline-block">
+                <span className="absolute inset-x-0 bottom-0 h-[4px] bg-[#63685a] block transform -translate-y-[2px] z-0"></span>
+                <span className="relative z-10 hover-underline-animation">
+                  software engineer
+                </span>
+              </div>{" "}
+              based in Los Angeles.
+            </span>
+          </div>
         </div>
-        <div className="max-w-5xl w-full lg:flex">software engineer</div>
-        <div className="max-w-5xl w-full lg:flex">📍 los angeles, california</div>
- <div className="max-w-5xl w-full lg:flex">currently working on front end development at&nbsp;<a href="https://www.fusionmarketplace.com">fusion marketplace</a>, a health care staffing recruitment platform</div>
- </div>
- {/* <div  */}
- <div className="w-full">{`In my past life, I was a Registered Nurse, but the universe has a funny way of changing things up. When I'm not coding, I like playing video games like Baldur's Gate 3 and Stardew Valley, watching anime/TV/movies, traveling, and trying new restaurants.`}</div>
-
- <div>probably tech stack section</div>
-
+      </div>
     </main>
-  )
+  );
 }

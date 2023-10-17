@@ -1,11 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-
-const myFont = localFont({
-  src: "/Metropolis-Regular.otf",
-  weight: "400",
-});
+import { NavBar } from "./components/navbar";
 
 export const metadata: Metadata = {
   title: "krisette odegard",
@@ -18,8 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={myFont.className}>{children}</body>
+    <html lang="en" className="bg-background text-onBackground">
+      <body>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
