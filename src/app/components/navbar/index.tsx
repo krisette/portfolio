@@ -8,7 +8,7 @@ export function NavBar() {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
-            KMO
+            <a href="/">KMO</a>
             <div className="md:hidden">
               <button
                 type="button"
@@ -59,9 +59,7 @@ export function NavBar() {
                 <a href="/about">About Me</a>
               </li>
               <li className="hover-underline-animation cursor-pointer">
-                {/* <Link to="experience" smooth> */}
-                Experience
-                {/* </Link> */}
+                <a href="/experience">Experience</a>
               </li>
               <li className="hover-underline-animation cursor-pointer">
                 {/* <Link to="contact" smooth> */}
