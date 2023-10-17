@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-background text-onBackground">
-      <body>
+      <body className="h-screen flex flex-col">
         <NavBar />
         {children}
       </body>

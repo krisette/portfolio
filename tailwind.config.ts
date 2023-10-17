@@ -11,6 +11,18 @@ const config: Config = {
       colors: {
         background: "#121212",
         onBackground: "#EDEDED",
+        primary: {
+          DEFAULT: '#936982',
+          light: '#A57A92'
+        },
+        accent: {
+          lightest: '#FFD1DC',
+          light: '#f2cdd7'
+        },
+        secondary: {
+          DEFAULT: '#9F5470',
+          dark: '#4D2E3D'
+        }
       },
     },
   },
@@ -26,10 +38,10 @@ const config: Config = {
           position: "absolute",
           width: "100%",
           transform: "scaleX(0)",
-          height: "2px",
+          height: "4px",
           bottom: "0",
           left: "0",
-          backgroundColor: "#D4C9B0",
+          backgroundColor: "#f2cdd7",
           transformOrigin: "bottom right",
           transition: "transform 0.25s ease-out",
         },

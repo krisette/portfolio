@@ -3,11 +3,11 @@ export default function Home() {
     <main className="flex flex-col">
       <div className="flex flex-col justify-center items-center px-16 py-6">
         <div className="w-full max-w-5xl">
-          <div className="text-4xl font-bold uppercase bg-gradient-to-r from-[#616758] to-[#99a693] bg-clip-text text-transparent">
+          <div className="text-4xl font-bold uppercase bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             About Me
           </div>
 
-          <div className="py-4">
+          <div className="py-2">
             I&#39;m Krisette. I specialize in front-end development, using
             TypeScript & JavaScript to create clean and user-friendly
             interfaces. While my heart lies at the front, I&#39;m no stranger to
@@ -20,7 +20,7 @@ export default function Home() {
             Nurse, my intrinsic draw to tech led me back to the world of coding.
           </div>
           <div className="relative inline-block mt-3">
-            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-[#63685a] block transform -translate-y-[2px] z-0"></span>
+            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
             <span className="relative text-xl font-bold z-10 uppercase">
               🖥️ Current Quest
             </span>
@@ -37,7 +37,7 @@ export default function Home() {
             traveler experience with our iOS and Android app
           </div>
           <div className="relative inline-block mt-3">
-            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-[#63685a] block transform -translate-y-[2px] z-0"></span>
+            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
             <span className="relative text-xl font-bold z-10 uppercase">
               🎮 WHEN I&#39;M NOT CODING...
             </span>
@@ -48,8 +48,11 @@ export default function Home() {
             restaurants
           </div>
 
-          <div className="text-4xl font-bold mt-12 uppercase bg-gradient-to-r from-[#616758] to-[#99a693] bg-clip-text text-transparent">
-            SKILLS
+          <div className="relative inline-block mt-3">
+            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
+            <span className="relative text-xl font-bold z-10 uppercase">
+            📝 SKILLS
+            </span>
           </div>
           <p className="text-white mb-5 text-justify">
             Here are some of the technologies I’ve been working with recently:
