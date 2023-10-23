@@ -1,10 +1,11 @@
 import Picture from "./Krisette_by_doki.png";
 import Image from "next/image";
+import SocialButton from "./components/social-button";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center px-2 lg:px-16 h-screen overflow-hidden">
+    <div className="flex flex-col justify-center items-center px-2 lg:px-16 h-screen overflow-hidden">
       <div className="flex flex-col lg:flex-row w-full text-center lg:text-left items-center justify-center">
         <div className="order-2 lg:order-1 flex flex-col lg:pl-16 mb-4 lg:mb-0 w-full lg:w-auto">
           <span className="text-2xl lg:ml-[2px]">Hello there! My name is</span>
@@ -22,31 +23,21 @@ export default function Home() {
             based in Los Angeles.
           </span>
           <div className="flex mt-4 space-x-8 justify-center">
-            <a
+            <SocialButton
               href="https://github.com/krisette"
-              target="_blank"
-              rel="noopener noreferrer"
+              label="Visit my GitHub"
             >
-              <button className="relative overflow-hidden bg-transparent border-2 border-secondary text-white py-2 px-4 rounded-lg flex items-center group">
-                <div className="z-10 flex items-center space-x-2">
-                  <FaGithub />
-                  <span>GitHub</span>
-                </div>
-                <span className="absolute top-0 left-0 w-full h-full bg-secondary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
-              </button>
-            </a>
-            <a
+              <FaGithub />
+              <span>GitHub</span>
+            </SocialButton>
+
+            <SocialButton
               href="https://linkedin.com/in/krisette"
-              target="_blank"
-              rel="noopener noreferrer"
+              label="Visit my LinkedIn"
             >
-              <button className="relative overflow-hidden bg-transparent border-2 border-secondary text-white py-2 px-4 rounded-lg flex items-center group">
-                <div className="z-10 flex items-center space-x-2">
-                  <FaLinkedin className="mr-2" /> <span>LinkedIn</span>
-                </div>
-                <span className="absolute top-0 left-0 w-full h-full bg-secondary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
-              </button>
-            </a>
+              <FaLinkedin className="mr-2" />
+              <span>LinkedIn</span>
+            </SocialButton>
           </div>
         </div>
         <div className="order-1 lg:order-2 flex justify-center flex-grow">
@@ -54,11 +45,16 @@ export default function Home() {
             href="https://ko-fi.com/doki_"
             target="_blank"
             rel="noopener noreferrer"
+            className="focus:outline-primary-light focus:outline-2 focus:outline-offset-2"
           >
-            <Image src={Picture} alt="chibi art by doki" height={500} />
+            <Image
+              src={Picture}
+              alt="chibi drawing of myself by doki"
+              height={500}
+            />
           </a>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

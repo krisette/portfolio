@@ -1,5 +1,5 @@
 import React from "react";
-import { SkillPill } from "../components/skills";
+import SkillPill from "../components/skill-pill";
 import {
   FaReact,
   FaNodeJs,
@@ -58,14 +58,14 @@ export default function About() {
   ];
 
   return (
-    <main className="flex flex-col">
+    <div className="flex flex-col">
       <div className="flex flex-col justify-center items-center lg:px-16 px-4 py-6">
         <div className="w-full max-w-5xl">
-          <div className="flex text-2xl font-bold uppercase text-accent-lightest pb-3 items-center justify-center">
+          <h1 className="flex text-2xl font-bold uppercase text-accent-lightest pb-3 items-center justify-center">
             About Me
-          </div>
+          </h1>
 
-          <div className="py-3">
+          <p className="py-3">
             I&#39;m Krisette. I specialize in front-end development, using
             TypeScript & JavaScript to create clean and user-friendly
             interfaces. While my heart lies at the front, I&#39;m no stranger to
@@ -76,54 +76,53 @@ export default function About() {
             personal blogging in high school (RIP, mocha-latte.org). And
             although a chapter of my life saw me in the role of a Registered
             Nurse, my intrinsic draw to tech led me back to the world of coding.
-          </div>
-          <div className="relative inline-block mt-6">
-            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
-            <span className="relative text-xl font-bold z-10 uppercase">
-              🖥️ Current Quest
-            </span>
-          </div>
-          <div>
-            Diving deep into front end development at{" "}
-            <a
-              href="https://www.fusionmarketplace.com"
-              className="hover-underline-animation font-semibold"
-            >
-              Fusion Marketplace
-            </a>
-            , a health care staffing recruitment platform, and extending the
-            traveler experience with our iOS and Android app
-          </div>
-          <div className="relative inline-block mt-6">
-            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
-            <span className="relative text-xl font-bold z-10 uppercase">
-              🎮 WHEN I&#39;M NOT CODING...
-            </span>
-          </div>
-          <div>
-            Catch me playing video games like Baldur&#39;s Gate 3 and Stardew
-            Valley, watching anime/TV/movies, traveling, eating, visiting Disney
-            parks all over the world (currently 4/6)
-          </div>
-
-          <div className="relative inline-block mt-6">
-            <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px] z-0"></span>
-            <span className="relative text-xl font-bold z-10 uppercase">
-              📝 SKILLS
-            </span>
-          </div>
-          <p className="text-white mb-5">
-            Here are some of the technologies I’ve been working with recently:
           </p>
-          <div className="flex flex-row flex-wrap justify-center">
-            <div className="flex flex-wrap justify-center">
+          <section className="mt-6">
+            <h2 className="text-xl font-bold uppercase relative inline-block">
+              <span aria-hidden="true">🖥️ </span>Current Quest
+              <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px]"></span>
+            </h2>
+            <p>
+              Diving deep into front end development at{" "}
+              <a
+                href="https://www.fusionmarketplace.com"
+                className="hover-underline-animation font-semibold"
+              >
+                Fusion Marketplace
+              </a>
+              , a health care staffing recruitment platform, and extending the
+              traveler experience with our iOS and Android app.
+            </p>
+          </section>
+          <section className="mt-6">
+            <h2 className="text-xl font-bold uppercase relative inline-block">
+              <span aria-hidden="true">🎮 </span>When I&#39;m Not Coding...
+              <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px]"></span>
+            </h2>
+            <p>
+              Catch me playing video games like Baldur&#39;s Gate 3 and Stardew
+              Valley, watching anime/TV/movies, traveling, eating, visiting
+              Disney parks all over the world (currently 4/6).
+            </p>
+          </section>
+          <section className="mt-6">
+            <h2 className="text-xl font-bold uppercase relative inline-block">
+              <span aria-hidden="true">📝 </span>Skills
+              <span className="absolute inset-x-0 bottom-0 h-[4px] bg-primary block transform -translate-y-[2px]"></span>
+            </h2>
+            <p className="text-white mb-5">
+              Here are some of the technologies I’ve been working with recently:
+            </p>
+            <ul className="flex flex-wrap justify-center">
               {skills.map((skill, index) => (
-                <SkillPill key={index} {...skill} />
+                <li key={skill.name}>
+                  <SkillPill {...skill} />
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </section>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

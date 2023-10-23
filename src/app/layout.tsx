@@ -16,9 +16,9 @@ export default function RootLayout({
     <html lang="en" className="bg-background text-onBackground">
       <body className="h-screen flex flex-col">
         <NavBar />
-        <div className="w-full  mx-auto px-4 lg:max-w-7xl md:px-8">
+        <main className="w-full  mx-auto px-4 lg:max-w-7xl md:px-8">
           {children}
-        </div>
+        </main>
       </body>
     </html>
   );

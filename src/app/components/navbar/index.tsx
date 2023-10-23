@@ -1,22 +1,31 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { HiSparkles } from "react-icons/hi";
 
 export function NavBar() {
   const [navbar, setNavbar] = useState(false);
+  const navItems = [
+    { href: "/about", label: "About Me" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+    { href: "/documents/Resume.pdf", label: "Download Resume", isButton: true },
+  ];
+
   return (
-    <nav className="w-full uppercase">
+    <header className="w-full uppercase">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block text-white">
-            <a href="/">
+            <Link href="/" aria-label="Home">
               <HiSparkles size={40} className="text-tertiary" />
-            </a>
+            </Link>
             <div className="md:hidden">
               <button
                 type="button"
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
+                aria-label="Toggle mobile menu"
               >
                 {navbar ? (
                   <svg
@@ -51,34 +60,36 @@ export function NavBar() {
             </div>
           </div>
         </div>
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+        <nav>
+          <ul
+            className={`flex flex-col md:flex-row justify-center items-center space-y-2 md:flex md:space-x-8 md:space-y-0 ${
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="items-center justify-center space-y-2 md:flex md:space-x-8 md:space-y-0">
-              <li className="hover-underline-animation cursor-pointer">
-                <a href="/about">About Me</a>
-              </li>
-              <li className="hover-underline-animation cursor-pointer">
-                <a href="/projects">Projects</a>
-              </li>
-              <li className="hover-underline-animation cursor-pointer">
-                <a href="/contact">Contact</a>
-              </li>
-              <li className="text-white hover:text-pink-200">
-                <a
-                  href="/documents/Resume.pdf"
-                  className="inline-block w-full px-4 py-2 text-center text-white border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
+            {navItems.map((item, index) => (
+              <li
+                key={index}
+                className={`cursor-pointer ${
+                  item.isButton
+                    ? "text-white hover:text-pink-200"
+                    : "hover-underline-animation"
+                }`}
+              >
+                <Link
+                  href={item.href}
+                  className={`focus:outline-primary-light focus:outline-2 focus:outline-offset-2 ${
+                    item.isButton
+                      ? "inline-block w-full px-4 py-2 text-center border-solid border-2 border-white rounded-md hover:bg-white hover:text-black"
+                      : ""
+                  }`}
                 >
-                  Download Resume
-                </a>
+                  {item.label}
+                </Link>
               </li>
-            </ul>
-          </div>
-        </div>
+            ))}
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

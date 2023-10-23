@@ -117,22 +117,22 @@ export default function Projects() {
   }, []);
 
   return (
-    <main className="flex flex-col">
-      <div className="flex flex-col justify-center items-center lg:px-16 px-4 py-6">
-        <div className="w-full max-w-5xl">
-          <div className="flex text-2xl font-bold uppercase text-accent-lightest pb-3 items-center justify-center">
-            Projects
-          </div>
+    <div className="flex flex-col">
+      <section className="flex flex-col justify-center items-center lg:px-16 px-4 py-6">
+        <article className="w-full max-w-5xl">
+          <header className="flex text-2xl font-bold uppercase text-accent-lightest pb-3 items-center justify-center">
+            <h1>Projects</h1>
+          </header>
           <div ref={masonryRef} className="masonry-container">
             <div className="grid-sizer"></div>
-            {projects.map((project, index) => (
-              <div key={index} className="project-card transition mb-4">
-                <ProjectCard key={index} {...project} />
+            {projects.map((project) => (
+              <div key={project.name} className="project-card transition mb-4">
+                <ProjectCard {...project} />
               </div>
             ))}
           </div>
-        </div>
-      </div>
-    </main>
+        </article>
+      </section>
+    </div>
   );
 }
