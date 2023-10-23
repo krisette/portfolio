@@ -1,13 +1,15 @@
 # krisette.io
 
-this repository contains the code for my personal website. it's a space where i showcase my work, share a bit about myself, and provide ways to get in touch.
+this is the source code for my personal website. here, i showcase my projects, share some insights about myself, and provide ways to get in touch.
 
 ## technologies used
 
-- **react**: a javascript library for building user interfaces.
-- **next.js**: a react framework that provides infrastructure and simple development experience for server-side rendered applications.
-- **tailwindcss**: a utility-first css framework used for styling the application.
-- **masonry**: a grid layout library that helps in creating a flexible and responsive card layout for project showcase.
+- **react**: a javascript library for creating user interfaces.
+- **next.js**: a framework that adds server-side rendering capabilities to react, simplifying the development of complex applications.
+- **tailwindcss**: a utility-first css framework for quickly designing web pages.
+- **masonry**: a library for creating a responsive grid layout.
+- **husky**: used to enforce code quality through pre-commit hooks that run linting before commits are made.
+- **github actions**: utilized for continuous integration and deployment, automating the process of deploying the website to github pages whenever changes are pushed.
 
 ## setup
 
